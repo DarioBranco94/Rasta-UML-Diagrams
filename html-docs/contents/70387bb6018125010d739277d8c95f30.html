@@ -62,7 +62,20 @@
         <h3>Description</h3>
         <div>
           
-            <span class="label label-info">none</span>
+            <p>This diagram describes the interaction between a user (Admin) and the system to:</p>
+
+<p>a. Import POIs and/or TOIs from external sources; 
+b. Store  the imported data in the POI-TOI DB;
+c. Compute POI-TOI scores and store them in the POI-TOI DB.</p>
+
+<p>The phases in the diagram are as follows:</p>
+
+<ol><li>The user logs into the system;</li><li>The POI-TOI Frontend shows to the user the list of possible operations;</li><li>The user selects the operation of importing POIs and/or TOIs from external sources (this operation may require to specify a URL of the external sources);
+4-5. The POI-TOI frontend forwards the request to the POI-TOI manager, which imports the data from the external sources and writes them into the POI-TOI DB;</li><li>The user selects the operation of computing the POI-TOI scores. This means that for every pair &lt;p,t&gt;, where p is a POI and t is a TOI, the system computes a score indicating the relevance of p with respect to t. This operation can be executed multiple times once the POI-TOI DB has been populated for the first time. Also, this operation can be restricted to a subset of POIs.
+10-11-12. The POI-TOI Frontend forwards the request to the POI-TOI Manager, which retrieves the list of POIs and the list of TOIs from the POI-TOI DB.
+13-14. The POI-TOI Manager asks the POI-TOI scorer to compute the scores (passing to it the list of POIs and the list of TOIs obtained at point 12) and gets the output.</li><li>The POI-TOI Manager writes the computed scores in the POI-TOI DB.</li></ol>
+
+<p>Remark: In order to avoid to transfer long lists of POIs and TOIs back and forward, this lists may be stored in some location and the components may exchange the corresponding URL.</p>
           
         </div>
       </section>

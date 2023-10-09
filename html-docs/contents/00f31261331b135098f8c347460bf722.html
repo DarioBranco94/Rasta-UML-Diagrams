@@ -62,7 +62,14 @@
         <h3>Description</h3>
         <div>
           
-            <span class="label label-info">none</span>
+            <p>This diagram describes the interaction between the user (Tourist) and the Travel Recommender System (TRS). The main phases are the following:
+1—6. When the user connect to the system, the TRS GUI retrieves the list of TOIs from the POI-TOI DB through the POI-TOI Manager, and shows them to the user.
+7—8. The user specifies and sends her preferences to the system.
+9—13. The POI and TOI – User Profile Matchmaker retrieves the POI-TOI scores from the POI-TOI DB (through the POI-TOI Manager), computes a ranking of the POIs based on the user preferences (previously acquired) and return this ranking to the user.
+14—15. The TRS GUI shows the ranking of the POI to the user through a list and shows the POIs on a map. 
+16. The user defines her constraints about: available time, means of  transportation, and subsets of POIs which have to be included in or excluded from the itinerary independent of their ranking. 
+17—21. The  TRS GUI forwards the user constraints to the Travel Planner, which computes a set of itineraries after the retrieval of route data from the Route DB; the itineraries are then displayed to the user by the TRS GUI.
+22—23. The user interacts with the system to select or view the itineraries and to display them on a map. </p>
           
         </div>
       </section>
@@ -191,6 +198,20 @@
             <td>public</td>
             <td><a href="96b553dbc798db0066e68a2e7d50bde6.html">Role7</a></td>
             <td><a href='c2c4d3f3832a71860313526dac3eb131.html'><span class='node-icon staruml-icon icon-UMLComponent'></span>POI-TOI Scorer</a> </td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="a6d017f4be0b32e512441aab564e286f.html">Role8</a></td>
+            <td><span class='label label-info'>none</span> </td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="5a4d1712f6f039ad1d53e8e9206a30b0.html">Role9</a></td>
+            <td><a href='f427506642fe155ec041f73d2bc4f24a.html'><span class='node-icon staruml-icon icon-UMLComponent'></span>POI and TOI - User Profile Matchmaker</a> </td>
             <td></td>
           </tr>
           
