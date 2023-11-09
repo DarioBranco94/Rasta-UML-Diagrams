@@ -1,4 +1,4 @@
 # Rasta-UML-Diagrams
 
 
-Actually locked by: Martina (GSSI)
+Actually locked by: None
